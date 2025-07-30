@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #021f2a;
+    color: white;
+    scroll-behavior: smooth;
+  }
+  header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 4rem;
+    background-color: #021f2a;
+    z-index: 999;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .logo img {
+    width: 50px;
+  }
+  nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+  }
+  nav a:hover {
+    color: #00aaff;
+  }
+  .hero-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem;
+    flex-wrap: wrap;
+  }
+  .left-section {
+    max-width: 45%;
+  }
+  .left-section h1 {
+    font-size: 3rem;
+    margin: 1rem 0;
+  }
+  .left-section p {
+    color: #ccc;
+    margin-bottom: 1.5rem;
+  }
+  .social-icons {
+    display: flex;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .social-icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    color: #021f2a;
+    font-size: 1.3rem;
+    text-decoration: none;
+    box-shadow: 0 0 8px rgba(0, 170, 255, 0.3);
+    transition: all 0.3s ease-in-out;
+    border: 1px solid transparent;
+  }
+  
+  .social-icons a:hover {
+    background-color: #00aaff;
+    color: #ffffff;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #00aaff;
+  }  
+  .sign-in {
+    padding: 10px 25px;
+    border: 2px solid #00aaff;
+    border-radius: 30px;
+    background: transparent;
+    color: #00aaff;
+    cursor: pointer;
+  }
+  .right-section img {
+    max-width: 100%;
+    height: auto;
+  }
+  .about-section {
+    display: flex;
+    padding: 4rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  .about-image img {
+    width: 300px;
+  }
+  .about-text {
+    max-width: 600px;
+  }
+  .services-section {
+    padding: 4rem;
+    text-align: center;
+  }
+  .services-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+  }
+  .service img {
+    width: 250px;
+    height: 150px;
+    object-fit: cover;
+  }
+  .service p {
+    margin-top: 10px;
+  }
+
+  .services-grid a.service {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .services-grid a.service:hover {
+    transform: scale(1.05);
+    color: #00aaff;
+  }
+
+  .testimonials-section {
+    padding: 4rem;
+    text-align: center;
+  }
+  .testimonials-grid {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+  }
+  .testimonial img {
+    width: 80px;
+    border-radius: 50%;
+  }
+  .testimonial {
+    max-width: 250px;
+  }
+  .contact-section {
+    padding: 4rem;
+  }
+  
+  .contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .contact-left {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .contact-left h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .contact-left p {
+    margin: 0.5rem 0 1rem;
+    font-size: 1.1rem;
+  }
+  
+  .contact-btn {
+    padding: 0.8rem 2rem;
+    background-color: transparent;
+    border: 2px solid #00aaff;
+    color: white;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    transition: 0.3s;
+  }
+  
+  .contact-btn:hover {
+    background-color: #00aaff;
+    color: #021f2a;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+  }
+  
+  .social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: #021f2a;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background 0.3s;
+  }
+  
+  .social-icons a:hover {
+    background-color: #00aaff;
+    color: white;
+  }
+  
+  .contact-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .contact-right img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+  
+  /* Responsive for Mobile */
+  @media (max-width: 768px) {
+    .contact-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .contact-right {
+      order: 2;
+    }
+  
+    .contact-left {
+      order: 1;
+    }
+  }
+  
+  
