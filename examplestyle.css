@@ -66,14 +66,35 @@ body {
     width: 50px;
   }
 .slider-container {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 20px;
+  display: flex;
+  justify-content: flex-start;
+  scroll-snap-type: x mandatory;
+}
+
+/* .slider-container {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 40px;
   padding-top: 9%;
+} */
+.card {
+  display: inline-block;
+  background-color: white;
+  width: 240px;
+  min-width: 240px;
+  margin-right: 16px;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  scroll-snap-align: start;
+  vertical-align: top;
 }
 
-.card {
+/* .card {
   background-color: lab(98.49% 1 0.34);
   width: 140px;
   height: 9%;
@@ -81,13 +102,20 @@ body {
   border-radius: 20px;
 
   text-align: center;
+} */
+.card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 12px;
 }
 
-.card img {
+/* .card img {
   width: 70px;
   height: 80px;
   text-align: center;
-}
+} */
+ 
+
 .card {
   transition: transform 0.3s ease;
 }
@@ -164,4 +192,25 @@ body {
 /* Show first slide by default */
 body:not(:has(:target)) #slide1 {
   display: flex;
+}
+@media (max-width: 768px) {
+  .slider-container {
+    flex-direction: row;
+    overflow-x: scroll;
+    padding: 10px;
+  }
+
+  .card {
+    width: 220px;
+    min-width: 220px;
+    padding: 15px;
+  }
+
+  .slides {
+    flex-wrap: nowrap;
+  }
+
+  .arrow {
+    display: none; /* optional: hide arrows on mobile */
+  }
 }
