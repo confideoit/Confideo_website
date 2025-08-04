@@ -1,0 +1,167 @@
+/* Existing Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 40px;
+  background-color: #021f2a;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* Navbar Styles */
+.navbar {
+
+  color: hwb(0 92% 5%);
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+ 
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: hsl(0, 17%, 94%);
+  text-decoration: none;
+  font-size: 16px;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  height: 2px;
+  background: #00bfff;
+  width: 0%;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: #00bfff;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .logo img {
+    width: 50px;
+  }
+.slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding-top: 9%;
+}
+
+.card {
+  background-color: lab(98.49% 1 0.34);
+  width: 140px;
+  height: 9%;
+  padding: 80px;
+  border-radius: 20px;
+
+  text-align: center;
+}
+
+.card img {
+  width: 70px;
+  height: 80px;
+  text-align: center;
+}
+.card {
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Slight zoom */
+}
+.card:hover {
+  transform: scale(1.05);
+  box-shadow:whitesmoke
+}
+.enroll {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.enroll:hover {
+  background-color: #0056b3;
+}
+
+.arrow {
+  font-size: 30px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: hwb(206 92% 5%);
+  
+}
+
+.arrow:hover {
+  color: hwb(233 1% 15%);
+}
+
+.circle {
+  width: 80px;
+  height: 60px;
+  background-color: hsl(192, 6%, 50%);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.circle:hover {
+  transform: scale(1.05);
+}
+
+/* NEW CSS FOR SLIDES */
+.slides > .slide {
+  display: none;
+  flex-direction: row;
+  gap: 40px;
+}
+/* .slides < .slide {
+  display: none;
+  flex-direction: row;
+  gap: 40px;
+} */
+
+
+/* Show targeted slide */
+#slide1:target,
+#slide2:target,
+#slide3:target {
+  display: flex;
+}
+
+/* Show first slide by default */
+body:not(:has(:target)) #slide1 {
+  display: flex;
+}
