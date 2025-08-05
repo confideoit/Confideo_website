@@ -36,50 +36,43 @@ body {
    width: 100%;
 } */
  
+/* Sticky Header */
 header {
-  position:fixed !important;/* Fixes navbar at the top */
+  position: fixed !important;
   top: 0;
-  left: auto;
-  right: auto;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding:1px; 
-  background-color: #03042c;
   z-index: 999;
-  margin: 0 auto;
-  scroll-margin-top: 100px;
-  
+  background-color: #03042c;
+}
+.navbar {
+  padding: 4px 16px !important;
+  min-height: 50px;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-left: 4%;
-  
+.navbar-brand {
+  padding-left: 8px;
 }
 
-.logo img {
-  width: 90px;
-  margin-left: 14%;
-  border-radius: 70%;
-  
+/* Logo styling if needed */
+.navbar-brand img {
+  height: 40x;
+  width: 40px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
-nav a {
-  color:white;
+/* Navbar link styles */
+.navbar-nav .nav-link {
   margin-left: 10px;
-  margin-right: 40px;
-  text-decoration:solid;
-  padding: 1px;
-  left: 0;
-  right: 0;
+  margin-right: 20px;
+  padding: 8px 12px;
+  color: white !important;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-nav a:hover {
-  color: #00aaff;
+.navbar-nav .nav-link:hover {
+  color: #00aaff !important;
 }
 
 /* This is key: each section scrolls cleanly under the sticky header */
@@ -135,23 +128,39 @@ section {
 }
 .about-section {
   padding: 2rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; /* 👉 Vertically align image and text */
+  gap: 2rem;
+  scroll-margin-top: 100px;
 }
 
 /* About Image */
 .about-image {
-  width: 100%;
-  max-width: 400px;
+  flex: 1 1 300px;
+  max-width: 250px;
+  max-height: 250px;
   height: auto;
   margin: 0 auto;
   border-radius: 15px;
-  display: block;
+  object-fit: contain;
 }
 
-/* About Text */
 .about-text {
+  
   font-size: 1.1rem;
   text-align: justify;
+  margin-bottom: 0%;
+  
 }
+
+.about-text h2 {
+  margin-top: 40px;     /* Space above heading */
+  margin-bottom: 1rem;  /* Space below heading */
+}
+
+
 
 
 /* Services Section */
@@ -178,6 +187,7 @@ section {
 }
 .service p {
   margin-top: 10px;
+  margin-bottom: 0%;
 }
 
 .services-grid a.service {
@@ -354,41 +364,16 @@ section {
   color: white;
 }
 
-.contact-right {
-  flex: 1;
-  display: flex;
-  justify-content: center;
- margin-right: 10%;
 
-  
-}
 
-.contact-right img {
+.contact-right-img {
   width: 100%;
-  max-width: 100%;
+  max-width: 600px;
+  height: 300px;
   border-radius: 10px;
-  margin: 0 auto;
   display: block;
-  text-align: center;
+  margin: 0 auto;
 }
-
-
-
-/* Responsive for Mobile */
-  @media (max-width: 768px) {
-    .contact-container {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .contact-right {
-      order: 2;
-    }
-  
-    .contact-left {
-      order: 1;
-    }
-  }
   .fab-container {
   position: fixed;
   bottom: 20px;
@@ -436,7 +421,21 @@ section {
   transform: scale(1.1);
 }
 
-
+/* Responsive for Mobile */
+  @media (max-width: 768px) {
+    .contact-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .contact-right {
+      order: 2;
+    }
+  
+    .contact-left {
+      order: 1;
+    }
+  }
   @media (max-width: 768px) {
   
 .about-image img {
@@ -445,8 +444,12 @@ section {
     box-sizing: border-box;
     
   }
+  .about-h2{
+    padding-left: 10px;
+  }
   .about-text{
     text-align: justify;
+    padding-left: 10px;
   }
 }
 @media (max-width: 768px) {
@@ -467,7 +470,7 @@ section {
     margin-bottom: 1rem;
   }
 
-  .contact-right img {
+  .contact-right-img {
     width: 100%;
     height: auto;
     max-width: 400px;

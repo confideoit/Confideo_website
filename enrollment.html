@@ -11,6 +11,11 @@
     rel="stylesheet"
   />
 </head>
+<style>
+  body{
+    background-color:#03042c;
+  }
+</style>
 <body>
 
   <div class="container mt-5">
@@ -68,7 +73,7 @@
           <div class="alert alert-success fs-5 fw-semibold" role="alert">
             🎉 You Enrollment is Successfully done.
           </div>
-          <button id="resetButton" class="btn btn-outline-light mt-2 text-dark">Submit Another Response</button>
+          <button id="resetButton" class="btn btn-outline-light mt-2">Submit Another Response</button>
         </div>
 
       </div>
@@ -96,7 +101,6 @@
     resetButton.addEventListener('click', function () {
       // Reset form fields
       form.reset();
-
       // Show the form and hide the success message
       formCard.classList.remove('d-none');
       successMessage.classList.add('d-none');

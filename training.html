@@ -6,29 +6,21 @@
   <title>Course Slider</title>
   <link rel="stylesheet" href="examplestyle.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
 </head>
 <body>
    <header class="navbar">
      <div class="logo">
       <img src="CIS.png" alt="CIS Logo">
-      <span class="text-dark">Confideo IT services</span>
     </div>
-
-  <nav class="nav-links">
-    <a href="#Home">Home</a>
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Blog</a>
-    <a href="#">Contact</a>
-  </nav>
 </header>
   <!-- Slide Navigation -->
   <div class="slider-container">
-
-    
   <a href="#slide1">
-  <span class="arrow">&#60;</span> <!-- This is < -->
+  <span class="arrow text-light">&#60;</span> <!-- This is < -->
 </a>
     <div class="slides">
       <!-- Slide 1 -->
@@ -103,15 +95,57 @@
 
       </div>
     </div>
-
-
+    
       <a href="#slide2">
-  <span class="arrow">&#62;</span> <!-- This is > -->
-</a>
-   
-
-   
+  <span class="arrow text-light">&#62;</span> <!-- This is > -->
+</a>   
   </div>
+  </script>
+   </section><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+   <div class="fab-container">
+  <!-- Main Chat Button -->
+  <button id="openFab" class="fab-main" title="Contact Us">
+    <i class="fas fa-comment-dots"></i>
+  </button>
+
+  <!-- Hidden Options -->
+  <div id="fabOptions" class="fab-options d-none">
+    <!-- Call (Blue) -->
+    <a href="tel:+918179886658" class="fab-option call bg-primary text-white" title="Call Us">
+      <i class="fas fa-phone"></i>
+    </a>
+
+    <!-- WhatsApp (Green) -->
+    <a href="https://wa.me/918179886658" class="fab-option whatsapp bg-success text-white" target="_blank" title="WhatsApp Us">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Email (Red) -->
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@confideoit.com&su=Support%20Request&" target="_blank" class="fab-option email bg-danger text-white" title="Email Us">
+      <i class="fas fa-envelope"></i>
+    </a>
+    <!-- Close Button (Gray or dark) -->
+    <button id="closeFab" class="fab-option close bg-dark text-white" title="Close">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+</div>
+<script>
+  const openFab = document.getElementById("openFab");
+  const fabOptions = document.getElementById("fabOptions");
+  const closeFab = document.getElementById("closeFab");
+
+  openFab.addEventListener("click", () => {
+    fabOptions.classList.remove("d-none");  // Show options
+    openFab.style.display = "none";         // Hide chat icon
+  });
+
+  closeFab.addEventListener("click", () => {
+    fabOptions.classList.add("d-none");     // Hide options
+    openFab.style.display = "flex";         // Show chat icon again
+  });
+</script>
+<script>
 </script>
    </section><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
