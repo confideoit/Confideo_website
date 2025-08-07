@@ -10,3 +10,29 @@ body {
   margin-top: 12%;
   margin-bottom: 15%;
 }
+/* 📱 Mobile responsiveness */
+@media (max-width: 768px) {
+  body {
+    margin-top: 20%;
+    margin-bottom: 25%;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    margin-top: 25%;
+    margin-bottom: 30%;
+  }
+}
+.responsive-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto; /* centers image horizontally */
+}
+
+
+
+
+
+
